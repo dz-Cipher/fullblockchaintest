@@ -500,6 +500,6 @@ MIT License - انظر [LICENSE](LICENSE) للتفاصيل
 
 🌙 **Moonify** - Where Privacy Meets Blockchain
 
-[GitHub](https://github.com/yourusername/moonify) • [Documentation](./docs) • [Examples](./examples)
+[GitHub](https://github.com/dz-Cipher/fullblockchain) • [Documentation](./docs) • [Examples](./examples)
 
 </div>

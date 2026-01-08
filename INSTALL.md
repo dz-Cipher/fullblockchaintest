@@ -102,7 +102,7 @@ cd ~
 cd /mnt/c/Users/YOURNAME/OneDrive/Documents/0/moonify
 
 # أو استنسخه من Git
-git clone https://github.com/yourusername/moonify.git
+git clone https://github.com/dz-Cipher/fullblockchain.git
 cd moonify
 ```
 
@@ -161,7 +161,7 @@ nargo --version
 ### الخطوة 6: استنساخ المشروع
 
 ```bash
-git clone https://github.com/yourusername/moonify.git
+git clone https://github.com/dz-Cipher/fullblockchain.git
 cd moonify
 ```
 
@@ -217,7 +217,7 @@ nargo --version
 ### الخطوة 6: استنساخ المشروع
 
 ```bash
-git clone https://github.com/yourusername/moonify.git
+git clone https://github.com/dz-Cipher/fullblockchain.git
 cd moonify
 ```
 
