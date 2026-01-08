@@ -1,5 +1,5 @@
 [package]
-name = "private_circuit"
+name = "moonify_circuits"
 type = "bin"
 authors = [""]
 compiler_version = ">=0.31.0"

@@ -51,8 +51,8 @@ async function getContractsInfo(deployment) {
     );
 
     const privateToken = await hre.ethers.getContractAt(
-        "PrivateToken",
-        deployment.contracts.PrivateToken
+        "MoonToken",
+        deployment.contracts.MoonToken
     );
 
     // عرض المعلومات
@@ -65,7 +65,7 @@ async function getContractsInfo(deployment) {
     console.log("   عدد المعاملات:", (await privatePool.transactionCount()).toString());
     console.log("   الرصيد:", hre.ethers.formatEther(await privatePool.getBalance()), "ETH");
 
-    console.log("\n💎 PrivateToken:");
+    console.log("\n💎 MoonToken:");
     console.log("   العنوان:", await privateToken.getAddress());
     console.log("   الاسم:", await privateToken.name());
     console.log("   الرمز:", await privateToken.symbol());

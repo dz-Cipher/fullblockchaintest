@@ -178,7 +178,7 @@ async function main() {
     if (hre.network.name === "sepolia") {
         console.log("   UltraVerifier: https://sepolia.etherscan.io/address/" + verifierAddress);
         console.log("   PrivatePool:   https://sepolia.etherscan.io/address/" + privatePoolAddress);
-        console.log("   PrivateToken:  https://sepolia.etherscan.io/address/" + privateTokenAddress);
+        console.log("   MoonToken:    https://sepolia.etherscan.io/address/" + privateTokenAddress);
     } else {
         console.log("   (متاح فقط على testnet/mainnet)");
     }

@@ -176,7 +176,7 @@ noirup
 ### 2️⃣ استنساخ المشروع
 
 ```bash
-git clone https://github.com/yourusername/moonify.git
+git clone https://github.com/dz-Cipher/fullblockchain.git
 cd moonify
 ```
 
