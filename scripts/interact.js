@@ -46,8 +46,8 @@ async function getContractsInfo(deployment) {
     );
 
     const privatePool = await hre.ethers.getContractAt(
-        "PrivatePool",
-        deployment.contracts.PrivatePool
+        "MoonPool",
+        deployment.contracts.MoonPool
     );
 
     const privateToken = await hre.ethers.getContractAt(
@@ -59,7 +59,7 @@ async function getContractsInfo(deployment) {
     console.log("🔍 UltraVerifier:");
     console.log("   العنوان:", await verifier.getAddress());
 
-    console.log("\n🏊 PrivatePool:");
+    console.log("\n🏊 MoonPool:");
     console.log("   العنوان:", await privatePool.getAddress());
     console.log("   المالك:", await privatePool.owner());
     console.log("   عدد المعاملات:", (await privatePool.transactionCount()).toString());

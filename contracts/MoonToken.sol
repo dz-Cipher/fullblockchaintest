@@ -215,7 +215,7 @@ contract MoonToken {
      * @param senderNewCommitment commitment جديد للمُرسل
      * @param recipientCommitment commitment للمُستقبِل
      * 
-     * تدفق العمل (مثل PrivatePool):
+     * تدفق العمل (مثل MoonPool):
      * 1. التحقق من oldCommitment
      * 2. التحقق من nullifier
      * 3. التحقق من الـ proof

@@ -5,7 +5,7 @@
  * 
  * هذا السكربت ينشر جميع العقود بالترتيب الصحيح:
  * 1. UltraVerifier (عقد التحقق من البراهين)
- * 2. PrivatePool (مجمع المعاملات الخاصة)
+ * 2. MoonPool (مجمع المعاملات الخاصة)
  * 3. MoonToken (التوكن الخاص)
  * 
  * الاستخدام:
@@ -53,16 +53,16 @@ async function main() {
     console.log("");
 
     // ==========================================
-    // الخطوة 2: نشر PrivatePool
+    // الخطوة 2: نشر MoonPool
     // ==========================================
-    console.log("📝 الخطوة 2/3: نشر PrivatePool...");
+    console.log("📝 الخطوة 2/3: نشر MoonPool...");
 
-    const PrivatePool = await hre.ethers.getContractFactory("PrivatePool");
-    const privatePool = await PrivatePool.deploy(verifierAddress);
-    await privatePool.waitForDeployment();
+    const MoonPool = await hre.ethers.getContractFactory("MoonPool");
+    const moonPool = await MoonPool.deploy(verifierAddress);
+    await moonPool.waitForDeployment();
 
-    const privatePoolAddress = await privatePool.getAddress();
-    console.log("✅ PrivatePool منشور على:", privatePoolAddress);
+    const moonPoolAddress = await moonPool.getAddress();
+    console.log("✅ MoonPool منشور على:", moonPoolAddress);
     console.log("");
 
     // ==========================================
@@ -74,11 +74,11 @@ async function main() {
     const initialSupply = hre.ethers.parseEther("2000000000");
 
     const MoonToken = await hre.ethers.getContractFactory("MoonToken");
-    const privateToken = await MoonToken.deploy(verifierAddress, initialSupply);
-    await privateToken.waitForDeployment();
+    const moonToken = await MoonToken.deploy(verifierAddress, initialSupply);
+    await moonToken.waitForDeployment();
 
-    const privateTokenAddress = await privateToken.getAddress();
-    console.log("✅ MoonToken منشور على:", privateTokenAddress);
+    const moonTokenAddress = await moonToken.getAddress();
+    console.log("✅ MoonToken منشور على:", moonTokenAddress);
     console.log("");
 
     // ==========================================
@@ -94,8 +94,8 @@ async function main() {
         timestamp: new Date().toISOString(),
         contracts: {
             UltraVerifier: verifierAddress,
-            PrivatePool: privatePoolAddress,
-            MoonToken: privateTokenAddress
+            MoonPool: moonPoolAddress,
+            MoonToken: moonTokenAddress
         },
         tokenInfo: {
             name: "Moonify Token",
@@ -111,8 +111,8 @@ async function main() {
     console.log("");
     console.log("📍 عناوين العقود:");
     console.log("   UltraVerifier:", verifierAddress);
-    console.log("   PrivatePool:  ", privatePoolAddress);
-    console.log("   MoonToken:    ", privateTokenAddress);
+    console.log("   MoonPool:     ", moonPoolAddress);
+    console.log("   MoonToken:    ", moonTokenAddress);
     console.log("");
     console.log("💎 معلومات التوكن:");
     console.log("   الاسم:", deploymentInfo.tokenInfo.name);
@@ -177,7 +177,7 @@ async function main() {
     console.log("4️⃣ عرض العقود على blockchain explorer:");
     if (hre.network.name === "sepolia") {
         console.log("   UltraVerifier: https://sepolia.etherscan.io/address/" + verifierAddress);
-        console.log("   PrivatePool:   https://sepolia.etherscan.io/address/" + privatePoolAddress);
+        console.log("   MoonPool:      https://sepolia.etherscan.io/address/" + moonPoolAddress);
         console.log("   MoonToken:    https://sepolia.etherscan.io/address/" + privateTokenAddress);
     } else {
         console.log("   (متاح فقط على testnet/mainnet)");
