@@ -1,0 +1,47 @@
+# ملفات البيئة - لا يجب مشاركتها أبداً!
+.env
+
+# Node modules
+node_modules/
+
+# Hardhat files
+cache/
+artifacts/
+typechain-types/
+
+# Noir files
+circuits/target/
+circuits/proofs/
+circuits/Prover.toml
+
+# Wallet files - تحتوي على مفاتيح خاصة!
+wallet/keys/
+*.key
+*.secret
+
+# Build files
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage
+coverage/
+coverage.json
+
+# Test files
+test-results/

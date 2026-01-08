@@ -1,0 +1,45 @@
+{
+  "name": "moonify-blockchain",
+  "version": "1.0.0",
+  "description": "🌙 Moonify - نظام بلوكتشين Layer 2 مع خصوصية كاملة باستخدام Zero-Knowledge Proofs",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "node": "hardhat node",
+    "verify": "hardhat verify --network sepolia",
+    "build:circuit": "cd circuits && nargo compile && cd ..",
+    "prove": "node scripts/test-proof.js",
+    "wallet": "node wallet/cli.js"
+  },
+  "keywords": [
+    "blockchain",
+    "zero-knowledge",
+    "privacy",
+    "ethereum",
+    "layer2",
+    "zk-snarks",
+    "noir"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "hardhat": "^2.19.4",
+    "chai": "^4.3.10",
+    "@typechain/hardhat": "^9.1.0"
+  },
+  "dependencies": {
+    "ethers": "^6.10.0",
+    "@noir-lang/noir_js": "^0.31.0",
+    "@noir-lang/backend_barretenberg": "^0.31.0",
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.6",
+    "crypto-js": "^4.2.0"
+  }
+}
